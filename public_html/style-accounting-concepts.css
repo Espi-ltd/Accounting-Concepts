@@ -1,0 +1,97 @@
+/* ----------overwrite defaults ---------------*/
+
+html, body div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+    text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ------------begin style------------- */
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Heebo', sans-serif;
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+header #img-main {
+    height: 50%;
+}
+
+#img-main {
+    background: url("images/ac-welcome.png") no-repeat center;
+    background-size: cover;
+    height: 600px;
+    
+
+}
+
+
+
+#wrapper {
+    width: 1366px;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+
+
+.orange {
+    color: #f6a900;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em
+        
+}
+
+footer {
+    width: 100%;
+    background-color: #1d452a;
+}
+
+#accountingconceptsinc {
+    margin-left: -9999px;
+}
