@@ -49,7 +49,13 @@ table {
 
 
 /* ------------begin style------------- */
+
+html {
+    height: 100%;
+}
+
 body {
+
     height: 100%;
     width: 100%;
     font-family: 'Heebo', sans-serif;
@@ -57,12 +63,76 @@ body {
     background-repeat: repeat-y;
     background-size: cover;
 
+
 }
+
+/*#accountingconceptsinc {
+    margin-left: -9999px;
+}*/
+
+
 
 header#nav_1 {
     text-align: center;
 
 }
+
+
+.horizontal-short{
+    width:725px; 
+    height:2px;
+    background:#bcc931;
+    margin-left: 150px;
+}
+.horizontal-long1{
+    width:600px; 
+    height: 3px;
+    background:#bcc931;
+    margin-left: 200px;
+
+}
+
+.horizontal-long2{
+    width:725px; 
+    height: 2px;
+    background:#bcc931;
+    margin-left: 150px;
+    margin-top: 20px;
+
+}
+
+
+.orange-welcome {
+    color: #f6a900;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.75em;
+    float: left;
+    padding-right: 10px;
+
+}
+
+
+#caption{
+    margin: 250px 0 0 140px;
+    width: 870px;
+    position: absolute;
+    z-index: 100;
+
+}
+
+.white-big1, .white-big2  {
+    font-style: normal;
+    color: #000;
+    font-size: 1.9em;
+    margin-top: 21px;
+}
+
+.white-big2 {
+    margin-left: 105px;
+    margin-top: 1px;
+
+}
+
 
 /*header#img-main {
     background: url("images/ac-welcome.png") no-repeat center top ;
@@ -77,19 +147,37 @@ header#nav_1 {
 
 }*/
 
+/*#bg {
+  position: relative; 
+  margin-top: 30%;
+  left: -50%; 
+  width: 200%; 
+  height: auto;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto;
+  
+ 
+}*/
 
 
 #wrapper {
     width: 1194px;
-    height: 100%;
+    height:  auto;
+    min-height: 100%;
     background-color: #FFF;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 42px;
 
 }
 
 #nav_2 ul, #logo {
-/*    margin-top: -30px;*/
+    /*    margin-top: -30px;*/
     float: left;
 }
 
@@ -98,7 +186,7 @@ header#nav_1 {
     padding: 20px;
     width: 900px;
     margin-top: 28px;
- 
+
 }
 
 #nav_2 ul li {
@@ -112,7 +200,7 @@ header#nav_1 {
     letter-spacing: 1px;
     text-decoration: none;
 
- 
+
 }
 
 #nav_2 ul li a:hover {
@@ -124,12 +212,9 @@ main {
     margin-top: 40%;
 }
 
-
-
-.orange {
-    color: #f6a900;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3em
+h2.sub-head {
+    font-size: 2em;
+    font-weight: lighter;
 
 }
 
@@ -138,6 +223,5 @@ footer {
     background-color: #1d452a;
 }
 
-#accountingconceptsinc {
-    margin-left: -9999px;
-}
+
+
