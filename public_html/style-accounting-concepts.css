@@ -1,0 +1,310 @@
+/* ----------overwrite defaults ---------------*/
+
+html, body div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ------------begin style------------- */
+
+html {
+    height: 100%;
+}
+
+body {
+
+    height: 100%;
+    width: 100%;
+    font-family: 'Heebo', sans-serif;
+    background-image: url("images/background.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+
+
+}
+
+/*#accountingconceptsinc {
+    margin-left: -9999px;
+}*/
+
+
+
+header#nav_1 {
+    text-align: center;
+
+}
+
+
+.horizontal-short{
+    width:725px; 
+    height:2px;
+    background:#bcc931;
+    margin-left: 150px;
+}
+.horizontal-long1{
+    width:600px; 
+    height: 3px;
+    background:#bcc931;
+    margin-left: 200px;
+
+}
+
+.horizontal-long2{
+    width:725px; 
+    height: 2px;
+    background:#bcc931;
+    margin-left: 150px;
+    margin-top: 20px;
+
+}
+
+
+.orange-welcome {
+    color: #f6a900;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.75em;
+    float: left;
+    padding-right: 10px;
+
+}
+
+
+#caption{
+    margin: 250px 0 0 140px;
+    width: 870px;
+    position: absolute;
+    z-index: 100;
+
+}
+
+.white-big1, .white-big2  {
+    font-style: normal;
+    color: #000;
+    font-size: 1.9em;
+    margin-top: 21px;
+}
+
+.white-big2 {
+    margin-left: 105px;
+    margin-top: 1px;
+
+}
+
+
+/*header#img-main {
+    background: url("images/ac-welcome.png") no-repeat center top ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 450px;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+
+}*/
+
+/*#photo {
+  position: relative; 
+  margin-top: 30%;
+  left: -50%; 
+  width: 200%; 
+  height: auto;
+}
+#bg {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto;
+  
+ 
+}*/
+
+
+#main_wrapper, #nav_wrapper {
+    width: 1194px;
+    /*    height:  auto;*/
+    /*    min-height: 100%;*/
+    background-color: #FFF;
+    margin: 0px auto;
+    padding: 42px;
+
+}
+
+/*#nav_wrapper {
+    height: 100%;
+}*/
+
+
+#nav_2 ul, #logo {
+    /*    margin-top: -30px;*/
+    float: left;
+}
+
+#nav_2 ul{
+    border-top: 1px solid #f6a900;
+    padding: 20px;
+    width: 900px;
+    margin-top: 28px;
+
+}
+
+#nav_2 ul li {
+    display: inline;
+}
+#nav_2 ul li a {
+    padding: 15px 15px 15px 28px;
+    text-align: center;
+    color: #1e222a;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+
+}
+
+#nav_2 ul li a:hover {
+    border-top: 5px solid #f6a900;
+}
+
+
+main {
+    margin-top: 40%;
+    padding-top: 10%;
+}
+
+h2.sub-head {
+    font-size: 2em;
+    font-weight: lighter;
+
+}
+
+footer {
+    width: 100%;
+    background-color: #1d452a;
+}
+
+/*#detroit {
+
+    overflow: hidden;
+    height: 400px;
+    padding-top: 30px;
+    width: 100%;
+align-content: stretch;
+position: absolute;
+
+
+}
+
+#swirl {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+}
+*/
+/*
+#detroit {
+    background: url("images/welcome.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    min-width: 1366px;
+    max-width: 100%;
+    height: 440px;
+    z-index: 0;
+    position: relative;
+ 
+}*/
+
+/*#swirl {
+    width: auto;
+    position: relative;
+    z-index: 1;
+}*/
+
+/*.big-image {
+    position: relative;
+    
+}*/
+.big-image {
+    background: url("images/detroit-welcome-test.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 650px;
+    max-height: 650px;
+    position: absolute;
+    display: block;
+    width: 100%;
+/*    max-width: 2000px;*/
+    min-width: 1366px;
+    z-index: 100;
+    margin-top: 2%;
+    
+
+}
+
+/* corresponds to max height of 450px */
+/*    height: auto;
+    max-height: 698px;
+}*/
+/*.bg-image h1 {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.nav, .main {
+    background-color: #f6f6f6;
+    text-align: center;
+}*/
