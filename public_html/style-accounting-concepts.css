@@ -7,7 +7,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, legend, 
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -87,10 +87,6 @@ body {
 }*/
 
 
-header#nav_1 {
-    text-align: center;
-
-}
 
 
 .horizontal-short{
@@ -152,39 +148,48 @@ header#nav_1 {
 
 
 
+
 #main_wrapper, #nav_wrapper {
     max-width: 1194px;
-    /*    height:  auto;*/
-    /*    min-height: 100%;*/
+    /*        min-height: 100%;*/
     background-color: #FFF;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 42px;
-
+    height: auto;
 }
 
 
-/*#nav_wrapper {
-    height: 100%;
-}*/
-
-
-#nav_2 ul, #logo {
+#nav_1 ul, #logo {
     /*    margin-top: -30px;*/
     float: left;
+
 }
 
-#nav_2 ul{
+/*#logo {
+  display: inline;
+  position: relative;
+  
+}*/
+
+#nav_1 h4{
+    text-align: center;
+    clear: left;
+
+}
+
+#nav_1 ul{
     border-top: 1px solid #f6a900;
     padding: 20px;
     width: 900px;
     margin-top: 28px;
+    
 
 }
 
-#nav_2 ul li {
+#nav_1 ul li {
     display: inline;
 }
-#nav_2 ul li a {
+#nav_1 ul li a {
     padding: 15px 15px 15px 28px;
     text-align: center;
     color: #1e222a;
@@ -195,21 +200,48 @@ header#nav_1 {
 
 }
 
-#nav_2 ul li a:hover {
+#nav_1 ul li a:hover {
     border-top: 5px solid #f6a900;
 }
 
-
 main {
-    margin-top: 40%;
-    padding-top: 10%;
+    height: 100%;
 }
+
 
 h2.sub-head {
     font-size: 2em;
     font-weight: lighter;
 
 }
+
+
+/*.item-active {
+   z-index: 858;
+   position: relative;
+    
+}*/
+
+.carousel-inner {
+    padding-bottom: 75px;
+}
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    min-width: 768px;
+    margin: auto;
+}
+
+#main_wrapper {
+    margin-top: -300px;
+    padding-top: 300px;
+    position: relative;
+    z-index: -556;
+}
+
+#nav_wrapper {
+   padding-bottom: 100px;
+}
+
 
 footer {
     width: 100%;
@@ -233,11 +265,6 @@ footer {
     padding-top: 33.333%;  3:1 ratio 
 }*/
 
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
 
 /*.big-image {
     background: url("images/detroit-welcome-test.png") no-repeat center center;
@@ -259,6 +286,18 @@ footer {
 }*/
 
 
+
+
+.box {
+    z-index: -555;
+    /*   margin: -698px;*/
+    margin: 0 auto;
+    width: 1194px;
+    margin-top: -698px;
+    height: 100%;
+    position: relative;
+}
+
 /* for ipad*/
 @media (max-width: 768px) {
     #nav_wrapper, #main_wrapper {
@@ -271,5 +310,4 @@ footer {
         }
 
 
-    }
-
+   }
