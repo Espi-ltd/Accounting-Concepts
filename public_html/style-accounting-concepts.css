@@ -9,8 +9,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -18,12 +18,12 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    /*    vertical-align: baseline;*/
     text-decoration: none;
 
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -61,23 +61,23 @@ body {
     font-family: 'Heebo', sans-serif;
 
 
-    /* IE10+ */ 
+    /* IE10+ */
     background-image: -ms-linear-gradient(left, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%);
 
-    /* Mozilla Firefox */ 
+    /* Mozilla Firefox */
     background-image: -moz-linear-gradient(left, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%);
 
-    /* Opera */ 
+    /* Opera */
     background-image: -o-linear-gradient(left, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%);
 
-    /* Webkit (Safari/Chrome 10) */ 
+    /* Webkit (Safari/Chrome 10) */
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(154,182,112,1)), color-stop(100, rgba(207,218,116,1)));
 
-    /* Webkit (Chrome 11+) */ 
+    /* Webkit (Chrome 11+) */
     background-image: -webkit-linear-gradient(left, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%);
 
-    /* W3C Markup */ 
-    background-image: url("images/square.png"), linear-gradient(to right, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%); 
+    /* W3C Markup */
+    background-image: url("images/square.png"), linear-gradient(to right, rgba(154,182,112,1) 0%, rgba(207,218,116,1) 100%);
 
 }
 
@@ -87,20 +87,44 @@ body {
 }*/
 
 
-header#nav_1 {
-    text-align: center;
+/*#nav-1 h4 {
+    background: url("images/nav-background.jpg") no-repeat;
+background-color: #1d452a;
+height: 30px;
 
+}*/
+/*==
+#nav_background h4{
+    text-align: center;
+    background-color: beige;
+    padding: 42px 42px 0px 42px;
+    width: 300px;
+
+
+}*/
+
+#nav_1 h4 {
+    text-align: center;
 }
 
 
+
+/*#nav-background  {
+      
+       position: relative;
+       
+   }*/
+
+
+
 .horizontal-short{
-    width:725px; 
+    width:725px;
     height:2px;
     background:#bcc931;
     margin-left: 150px;
 }
 .horizontal-long1{
-    width:600px; 
+    width:600px;
     height: 3px;
     background:#bcc931;
     margin-left: 200px;
@@ -108,7 +132,7 @@ header#nav_1 {
 }
 
 .horizontal-long2{
-    width:725px; 
+    width:725px;
     height: 2px;
     background:#bcc931;
     margin-left: 150px;
@@ -130,7 +154,8 @@ header#nav_1 {
 .carousel-caption{
     /*    margin: 250px 0 0 140px;*/
     min-width: 650px;
-
+    top: 25%;
+    left: 25%;
     max-width: 870px;
     /*    position: absolute;
         z-index: 100;*/
@@ -138,10 +163,11 @@ header#nav_1 {
 }
 
 .white-big1, .white-big2  {
-    font-style: normal;
-    color: #000;
+    font-weight: 400;
+    color: #FFF;
     font-size: 1.9em;
     margin-top: 21px;
+
 }
 
 .white-big2 {
@@ -152,40 +178,80 @@ header#nav_1 {
 
 
 
+
 #main_wrapper, #nav_wrapper {
     max-width: 1194px;
-    /*    height:  auto;*/
-    /*    min-height: 100%;*/
+    /*        min-height: 100%;*/
     background-color: #FFF;
-    margin: 0px auto;
-    padding: 42px;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    padding: 42px 12px 0px 12px;
+    height: auto;
+}
+
+#nav_1 h4 {
+    letter-spacing: .05em;
+}
+
+#nav_1 h4 a{
+    font-weight: 700;
+    color: #1e222a;
+}
+
+.black-bullet {
+    font-size:  1.25em;
+    padding: 5px;
 
 }
 
+.orange-slash {
+    color: #f6a900;
+    padding: 10px;
+    font-weight: 900;
+}
 
-/*#nav_wrapper {
-    height: 100%;
+#nav_1 {
+    height: 130px;
+}
+
+
+
+#nav_1 ul, #logo {
+    /*    margin-top: -30px;*/
+    float: left;
+
+}
+
+/*#logo {
+  display: inline;
+  position: relative;
+
 }*/
 
 
-#nav_2 ul, #logo {
-    /*    margin-top: -30px;*/
-    float: left;
+#nav_wrapper {
+
+    padding-top: 0;
 }
 
-#nav_2 ul{
+
+
+#nav_1 ul{
     border-top: 1px solid #f6a900;
     padding: 20px;
     width: 900px;
     margin-top: 28px;
 
+
 }
 
-#nav_2 ul li {
+#nav_1 ul li {
     display: inline;
 }
-#nav_2 ul li a {
-    padding: 15px 15px 15px 28px;
+#nav_1 ul li a {
+    padding: 15px 15px 0 28px;
     text-align: center;
     color: #1e222a;
     font-size: 1.2em;
@@ -195,15 +261,17 @@ header#nav_1 {
 
 }
 
-#nav_2 ul li a:hover {
+#nav_1 ul li a:hover {
     border-top: 5px solid #f6a900;
 }
 
 
+
+
 main {
-    margin-top: 40%;
-    padding-top: 10%;
+    height: 100%;
 }
+
 
 h2.sub-head {
     font-size: 2em;
@@ -211,33 +279,60 @@ h2.sub-head {
 
 }
 
+
+/*.item-active {
+   z-index: 858;
+   position: relative;
+
+}*/
+
+/*.carousel-inner,
+.item-active {
+    padding-bottom: 75px;
+   height: 698px;
+}*/
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    min-width: 768px;
+    margin: auto;
+}
+
+#main_wrapper {
+    margin-top: -100%;
+    padding-top: 100%;
+    /*    position: relative;
+        z-index: -556;*/
+}
+/*
+section {
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+}*/
+
+
 footer {
     width: 100%;
     background-color: #1d452a;
 }
 
 /*.big-image {
-    max-width: 2200px;  actual img width 
+    max-width: 2200px;  actual img width
     min-width: 1366px;
-    max-height: 698px;  actual img height 
-    *height: 698px;  actual img height - IE7 
+    max-height: 698px;  actual img height
+    *height: 698px;  actual img height - IE7
     background-image: url(images/detroit-welcome-test.png);
     background-size: cover;
     background-position: center;
 }
 .big-image:after {
     content: " ";
-    display: block; 
-    width: 100%; 
+    display: block;
+    width: 100%;
 
-    padding-top: 33.333%;  3:1 ratio 
+    padding-top: 33.333%;  3:1 ratio
 }*/
 
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
 
 /*.big-image {
     background: url("images/detroit-welcome-test.png") no-repeat center center;
@@ -259,6 +354,106 @@ footer {
 }*/
 
 
+#contact-section {
+    clear: left;
+}
+
+.box {
+    z-index: -555;
+    /*   margin: -698px;*/
+    margin: 0 auto;
+    width: 1194px;
+    margin-top: -692px;
+    /*    height: 100%;*/
+    position: relative;
+    /*    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.4);*/
+}
+
+
+/*------section vertical lines---------*/
+#vertical-lines-1 {
+    padding-bottom: 30px;
+
+}
+
+.vertical-short{
+    height:300px; 
+    width:5px;
+    background:#305b35;
+    padding-left: 0;
+    margin-left: 0;
+    left: 39px;
+}
+/*.vertical-tall{
+    height:85px; 
+    width:1px;
+    background:#305b35;
+    margin-left: 3px;
+}*/
+
+#services-teaser, #resources-teaser, #staff-teaser {
+    border-left: 4px solid #305b35;
+    /*    border-right: 1px solid #305b35;*/
+
+    padding-left: 30px;
+
+    /*   padding-top: 25px;*/
+    min-width: 300px;
+}
+
+#resources-teaser, #staff-teaser {
+    border-right: 1px solid #305b35;
+
+}
+
+
+
+/*------------------*/
+
+
+/*------ teaser padding-------*/
+/*#services-teaser {
+    top: -50px;
+}
+
+
+#resources-teaser {
+    top: -15px;
+
+}
+
+#staff-teaser {
+  top: 30px;
+
+}*/
+
+/*------------------*/
+#services-teaser ul li {
+    padding: 10px;
+}
+
+#services-teaser ul li a {
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+
+.list-group-item-warning {
+    background-color: #eff3cf;
+}
+
+#services-teaser ul li a {
+    color: #305b35;
+}
+
+
+
+
+/*------------------*/
+
+
 /* for ipad*/
 @media (max-width: 768px) {
     #nav_wrapper, #main_wrapper {
@@ -273,3 +468,37 @@ footer {
 
     }
 
+
+    @media (max-width: 768px) {
+
+        .box {
+            visibility: hidden;
+            display: none;
+        }
+
+
+        #nav_1 {
+            padding-top: 20px;
+        }
+        #nav_1 ul {
+            width: 520px;
+            padding-top: 4px;
+        }
+
+        #nav_1 ul li a {
+            font-size: .75em;
+        }
+
+        #nav_1 ul li a:hover {
+            border-top: 2px solid #f6a900;
+        }
+
+        #nav_1 ul li a {
+            padding: 5px 10px 10px 3px;
+
+
+
+        }
+
+
+        /*        /*---use 952 for width of wrapper for screens smaller than 1024;current width of wrapper is 1194, but try 1024 later---*/
