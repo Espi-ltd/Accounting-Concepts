@@ -1,3 +1,51 @@
+<?php
+if (isset($_POST["submit"])) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  $human = intval($_POST['human']);
+  $from = 'Demo Contact Form';
+  $to = 'grandmaster03@gmail.com';
+  $subject = 'Message from Contact Demo ';
+
+  $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+  // Check if name has been entered
+  if (!$_POST['name']) {
+    $errName = 'Please enter your name';
+  }
+
+  // Check if email has been entered and is valid
+  if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errEmail = 'Please enter a valid email address';
+  }
+
+  //Check if message has been entered
+  if (!$_POST['message']) {
+    $errMessage = 'Please enter your message';
+  }
+  
+  
+   if (!$_POST['message']) {
+    $errMessage = 'Please enter your message';
+  }
+//  //Check if simple anti-bot test is correct
+//  if ($human !== 5) {
+//    $errHuman = 'Your anti-spam is incorrect';
+//    && !$errHuman
+//    
+//  }
+// If there are no errors, send the email
+  if (!$errName && !$errEmail && !$errMessage) {
+    if (mail($to, $subject, $body, $from)) {
+      $result = '<div class="alert alert-success">Thank You! We will be in touch.</div>';
+    } else {
+      $result = '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+    }
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <!--
 -->
@@ -62,9 +110,9 @@
                 <!--                                <li><a href="#">CLIENT PORTAL</a></li>-->
 
                 <li role="separator" class="nav-divider"></li>
-                <li><a href="#contact-information" data-toggle="collapse" data-target=".navbar-collapse.in">CONTACT INFO</a></li>
-                <li><a href="#message" data-toggle="collapse" data-target=".navbar-collapse.in">MESSAGE</a></li>
-                <li><a href="#location" data-toggle="collapse" data-target=".navbar-collapse.in">LOCATION</a></li>
+                <li><a href="#contactinfo">CONTACT INFO</a></li>
+                <li><a href="#message">MESSAGE</a></li>
+                <li><a href="#location">LOCATION</a></li>
 
 
               </ul>
@@ -234,7 +282,7 @@
               <ul class="list-group">
                 <li><a href="aboutus.html#staff"> <img id="david-ewing1" src="images/david-ewing-1.jpg" alt="david-ewing-cpa" height="200" width="222"></a>
                 </li>
-                <li id="staff-button"> <a href="aboutus.html" class="cta-button" role="button">MEET OUR STAFF</a></li>
+                <li id="staff-button"> <a href="resources.html" class="cta-button" role="button">MEET OUR STAFF</a></li>
               </ul>
             </div>
 
@@ -243,36 +291,84 @@
         </section>
 
         <section id="contact-section" class="row">
-          <div id="message" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
             <div class="contact-hr1"></div>
             <div class="contact-hr2"></div>
 
-            <h2 class="sub-head">Send Us a Message</h2>
-            <form id="contact" action="mailto:grandmaster03@gmail.com" method="post">
-              <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
-              <fieldset>
-                <input class="form-control" placeholder="Full Name" type="text" name="fullname" tabindex="19" required>
-              </fieldset>
-              <fieldset>
-                <input class="form-control" placeholder="Email Address" type="email" name="email"  tabindex="20" required>
-              </fieldset>
-              <fieldset>
-                <input class="form-control" placeholder="Phone Number" type="tel" name="email" tabindex="21" required>
-              </fieldset>
+            <h2 id="message" class="sub-head">Send Us a Message</h2>
+            <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
 
-              <fieldset>
-                <textarea class="form-control" placeholder="Type your Message Here...." tabindex="22" required></textarea>
-              </fieldset>
-              <fieldset class="form-group">
-                <div class="g-recaptcha" data-theme="light" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ" tabindex="23"></div>
-              </fieldset>
+            <form class="form-horizontal" role="form" method="post" action="index.php">
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                  <?php echo "<p class='text-danger'>$errName</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="youremail@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                  <?php echo "<p class='text-danger'>$errEmail</p>"; ?>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="col-sm-2 control-label">Message</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']); ?></textarea>
+                  <?php echo "<p class='text-danger'>$errMessage</p>"; ?>
+                </div>
+              </div>
 
-              <fieldset>
-                <button id="contact-submit" class="btn-primary" name="submit" type="submit" value="send email" data-submit="...Sending" tabindex="24">SUBMIT</button>
-              </fieldset>
+              <div class="form-group col-sm-10-offset-2">
+                <div class="g-recaptcha" name="human" data-theme="light" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ" tabindex="23"></div>
+                <!--                <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                                <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+                                  
+                                </div>-->
+              
+              <?php echo "<p class='text-danger'>$errHuman</p>"; ?>
+              </div>
 
-            </form>
+              <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                  <input id="submit" name="submit" type="submit" value="Send" class="btn-primary">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                  <?php echo $result; ?>	
+                </div>
+              </div>
+            </form> 
+
+            <!--                        <form id="contact" action="mailto:grandmaster03@gmail.com" method="post">
+                                        <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Full Name" type="text" name="fullname" tabindex="19" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Email Address" type="email" name="email"  tabindex="20" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Phone Number" type="tel" name="email" tabindex="21" required>
+                                        </fieldset>
+            
+                                        <fieldset>
+                                            <textarea class="form-control" placeholder="Type your Message Here...." tabindex="22" required></textarea>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <div class="g-recaptcha" data-theme="light" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ" tabindex="23"></div>
+                                        </fieldset>
+            
+                                        <fieldset>
+                                            <button id="contact-submit" class="btn-primary" name="submit" type="submit" value="send email" data-submit="...Sending" tabindex="24">SUBMIT</button>
+                                        </fieldset>
+            
+                                    </form>-->
           </div>
 
           <div id="map_google" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -330,7 +426,8 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+   <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
     </div>
 
     <footer>

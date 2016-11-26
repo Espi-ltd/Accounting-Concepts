@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 -->
@@ -15,6 +16,19 @@
     <link rel="stylesheet" href="style-accounting-concepts.css">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
+  <link rel="stylesheet" href="assets/vender/intl-tel-input/css/intlTelInput.css">
+    <style>
+      .container {
+        width: auto;
+        max-width: 800px;
+      }
+      .form-group {
+        margin-bottom: 8px;
+      }
+      #feedbackForm {
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
     <!-- <div id="accountingconceptsinc"><h1 tabindex="1"> Accounting Concepts Inc.</h1> </div> -->
@@ -62,9 +76,9 @@
                 <!--                                <li><a href="#">CLIENT PORTAL</a></li>-->
 
                 <li role="separator" class="nav-divider"></li>
-                <li><a href="#contact-information" data-toggle="collapse" data-target=".navbar-collapse.in">CONTACT INFO</a></li>
-                <li><a href="#message" data-toggle="collapse" data-target=".navbar-collapse.in">MESSAGE</a></li>
-                <li><a href="#location" data-toggle="collapse" data-target=".navbar-collapse.in">LOCATION</a></li>
+                <li><a href="#contactinfo">CONTACT INFO</a></li>
+                <li><a href="#message">MESSAGE</a></li>
+                <li><a href="#location">LOCATION</a></li>
 
 
               </ul>
@@ -234,7 +248,7 @@
               <ul class="list-group">
                 <li><a href="aboutus.html#staff"> <img id="david-ewing1" src="images/david-ewing-1.jpg" alt="david-ewing-cpa" height="200" width="222"></a>
                 </li>
-                <li id="staff-button"> <a href="aboutus.html" class="cta-button" role="button">MEET OUR STAFF</a></li>
+                <li id="staff-button"> <a href="resources.html" class="cta-button" role="button">MEET OUR STAFF</a></li>
               </ul>
             </div>
 
@@ -243,36 +257,102 @@
         </section>
 
         <section id="contact-section" class="row">
-          <div id="message" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
             <div class="contact-hr1"></div>
             <div class="contact-hr2"></div>
 
-            <h2 class="sub-head">Send Us a Message</h2>
-            <form id="contact" action="mailto:grandmaster03@gmail.com" method="post">
-              <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
-              <fieldset>
-                <input class="form-control" placeholder="Full Name" type="text" name="fullname" tabindex="19" required>
-              </fieldset>
-              <fieldset>
-                <input class="form-control" placeholder="Email Address" type="email" name="email"  tabindex="20" required>
-              </fieldset>
-              <fieldset>
-                <input class="form-control" placeholder="Phone Number" type="tel" name="email" tabindex="21" required>
-              </fieldset>
+            <h2 id="message" class="sub-head">Send Us a Message</h2>
+            <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
 
-              <fieldset>
-                <textarea class="form-control" placeholder="Type your Message Here...." tabindex="22" required></textarea>
-              </fieldset>
-              <fieldset class="form-group">
-                <div class="g-recaptcha" data-theme="light" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ" tabindex="23"></div>
-              </fieldset>
+  <div id="contact" class="container">
+      <div id="contact_form" class="row">
+        <div class="col-md-12">
+          <form role="form" id="feedbackForm"  data-toggle="validator" data-disable="false">
+            <div class="form-group">
+              <label class="control-label" for="name">Name *</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required/>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+              </div>
+              <span class="help-block" style="display: none;">Please enter your name.</span>
+            </div>
+            <!-- UNCOMMENT HERE IF YOU WANT TITLE, COMPANY, WEBSITE OR PHONE FIELDS - you must also uncomment values in $fields_req in sendmail.php
+            <div class="form-group">
+              <label class="control-label" for="title">Title</label>
+              <input type="text" class="form-control optional" id="title" name="title" />
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="company">Company</label>
+              <input type="text" class="form-control optional" id="company" name="company" />
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="website">Website</label>
+              <input type="url" class="form-control optional" id="website" name="website" />
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="phone">Phone</label>
+              <input type="tel" class="form-control optional" id="phone" name="phone" placeholder="Enter your phone (Optional)"/>
+              <span class="help-block" style="display: none;">Please enter a valid phone number.</span>
+            </div>
+            -->
+            <div class="form-group">
+            <label class="control-label" for="phone">Phone</label>
+              <input type="tel" class="form-control optional" id="phone" name="phone" placeholder="Enter your phone (Optional)"/>
+              <span class="help-block" style="display: none;">Please enter a valid phone number.</span>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="email">Email Address *</label>
+              <div class="input-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required/>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+              </div>
+              <span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="message">Message *</label>
+              <div class="input-group">
+                <textarea rows="5" cols="30" class="form-control" id="message" name="message" placeholder="Enter your message" required></textarea>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked form-control-feedback"></i></span>
+              </div>
+              <span class="help-block" style="display: none;">Please enter a message.</span>
+            </div>
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ"></div>
+              <span class="help-block" style="display: none;">Please check that you are not a robot.</span>
+            </div>
+            <span class="help-block" style="display: none;">Please enter a the security code.</span>
+            <button type="submit" id="feedbackSubmit" class="btn-primary" data-loading-text="Sending..." style="display: block; margin-top: 10px;">Send Message</button>
+          </form>
+        </div><!--/span-->
+      </div><!--/row-->
+      <hr>
+    </div><!--/.container-->
 
-              <fieldset>
-                <button id="contact-submit" class="btn-primary" name="submit" type="submit" value="send email" data-submit="...Sending" tabindex="24">SUBMIT</button>
-              </fieldset>
-
-            </form>
+            <!--                        <form id="contact" action="mailto:grandmaster03@gmail.com" method="post">
+                                        <h4>Our staff is here to answer your questions. Use the form below to send us a message and we will respond promptly with assistance.</h4>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Full Name" type="text" name="fullname" tabindex="19" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Email Address" type="email" name="email"  tabindex="20" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input class="form-control" placeholder="Phone Number" type="tel" name="email" tabindex="21" required>
+                                        </fieldset>
+            
+                                        <fieldset>
+                                            <textarea class="form-control" placeholder="Type your Message Here...." tabindex="22" required></textarea>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <div class="g-recaptcha" data-theme="light" data-sitekey="6LfzDgsUAAAAAH9iOC_R_5FXrfyZBaf2WgAby4wJ" tabindex="23"></div>
+                                        </fieldset>
+            
+                                        <fieldset>
+                                            <button id="contact-submit" class="btn-primary" name="submit" type="submit" value="send email" data-submit="...Sending" tabindex="24">SUBMIT</button>
+                                        </fieldset>
+            
+                                    </form>-->
           </div>
 
           <div id="map_google" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -330,7 +410,8 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+   <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
     </div>
 
     <footer>
